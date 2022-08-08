@@ -148,12 +148,7 @@
                       <p>{{ __('RTL Support') }}</p>
                     </a>
                   </li>
-                  <li class="nav-item active-pro{{ $activePage == 'upgrade' ? ' active' : '' }}">
-                    <a class="nav-link text-white bg-danger" href="{{ route('upgrade') }}">
-                      <i class="material-icons text-white">unarchive</i>
-                      <p>{{ __('Upgrade to PRO') }}</p>
-                    </a>
-                  </li>
+       e
                 </ul>
               </div>
             </div>
@@ -201,7 +196,7 @@
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href="#">Mike John responded to your email</a>
           <a class="dropdown-item" href="#">You have 5 new tasks</a>
-          <a class="dropdown-item" href="#">You're now friend with Andrew</a>
+          <a class="dropdown-item" href="#">You are now friend with Andrew</a>
           <a class="dropdown-item" href="#">Another Notification</a>
           <a class="dropdown-item" href="#">Another One</a>
         </div>
@@ -278,10 +273,6 @@
                 </table>
               </div>
             </div>
-          </div>
-          <div class="alert alert-danger">
-            <span style="font-size:18px;">
-              <b> </b> This is a PRO feature!</span>
           </div>
       </div>
     </div>

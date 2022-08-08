@@ -8666,7 +8666,7 @@ button.bg-dark:focus {
 }
 
 .text-primary {
-  color: #2196f3 !important;
+  color: #000000 !important;  /* color tabla */
 }
 
 a.text-primary:hover,
@@ -14781,6 +14781,11 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
   background-color: #00bcd4;
   box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(0, 188, 212, 0.4);
 }
+.sidebar[data-color="red"] li.active>a {
+  background-color: #91152b;
+  box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(145,21,43,255);
+}
+
 
 .sidebar[data-color="green"] li.active>a {
   background-color: #4caf50;
@@ -16777,7 +16782,8 @@ label {
 .card.bg-primary,
 .card.card-rotate.bg-primary .front,
 .card.card-rotate.bg-primary .back {
-  background: linear-gradient(60deg, #ab47bc, #8e24aa);
+  /* background: linear-gradient(60deg, #ab47bc, #8e24aa); */
+  background: linear-gradient(60deg, #273455, #9cbbd1);
 }
 
 .card .card-header-info .card-icon,
@@ -18857,5 +18863,6 @@ Copyright (c) 2015 Daniel Eden
     list-style: none;
 }
 
+}
 
 /*# sourceMappingURL=dashboard-free.css.map */

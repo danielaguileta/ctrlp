@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\CotizacionesController;
+use App\Http\Controllers\DatosEmpresaController;
+use App\Http\Controllers\ServiciosController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -61,3 +64,25 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'App\Http\Controllers\ProfileController@password']);
 });
 
+Route::group(['middleware' => 'auth'], function () {
+	Route::resource('user', 'App\Http\Controllers\UserController', ['except' => ['show']]);
+	Route::get('profile', ['as' => 'profile.edit', 'uses' => 'App\Http\Controllers\ProfileController@edit']);
+	Route::put('profile', ['as' => 'profile.update', 'uses' => 'App\Http\Controllers\ProfileController@update']);
+	Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'App\Http\Controllers\ProfileController@password']);
+});
+
+//Servivios
+Route::group(['middleware' => ['auth']], function () {
+    Route::resource('servicios', ServiciosController::class)->names('servicios');
+});
+
+//Servivios
+Route::group(['middleware' => ['auth']], function () {
+    Route::resource('cotizaciones', CotizacionesController::class)->names('cotizaciones');
+});
+
+
+Route::group(['middleware' => 'auth'], function () {
+	Route::get('datos', ['as' => 'datos.edit', 'uses' => 'App\Http\Controllers\DatosEmpresaController@edit']);
+	Route::put('datos', ['as' => 'datos.update', 'uses' => 'App\Http\Controllers\DatosEmpresaController@update']);
+});
