@@ -9,7 +9,7 @@
             @csrf
             <div class="card ">
               <div class="card-header card-header-primary">
-                <h4 class="card-title">{{ __('Agregar servicios') }}</h4>
+                <h4 class="card-title">{{ __('Numero de empleados') }}</h4>
                 <p class="card-category">{{ __() }}</p>
               </div>
               <div class="card-body ">
