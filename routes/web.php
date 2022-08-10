@@ -71,18 +71,3 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'App\Http\Controllers\ProfileController@password']);
 });
 
-//Servivios
-Route::group(['middleware' => ['auth']], function () {
-    Route::resource('servicios', ServiciosController::class)->names('servicios');
-});
-
-//Servivios
-Route::group(['middleware' => ['auth']], function () {
-    Route::resource('cotizaciones', CotizacionesController::class)->names('cotizaciones');
-});
-
-
-Route::group(['middleware' => 'auth'], function () {
-	Route::get('datos', ['as' => 'datos.edit', 'uses' => 'App\Http\Controllers\DatosEmpresaController@edit']);
-	Route::put('datos', ['as' => 'datos.update', 'uses' => 'App\Http\Controllers\DatosEmpresaController@update']);
-});
