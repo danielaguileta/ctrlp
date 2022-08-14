@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\usuarios;
+namespace App\Http\Controllers\personas;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class Tbl_usuariosController extends Controller
+class Tbl_personasController extends Controller
 {
     /**
      * Display a listing of the resource.
