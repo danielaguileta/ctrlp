@@ -114,8 +114,8 @@
           </ul>
         </div>
       </li>
-       <li class="nav-item{{ $activePage == 'compra' ? ' active' : '' }}">
-        <a class="nav-link" href="#">
+      <li class="nav-item{{ $activePage == 'compras' ? ' active' : '' }}">
+        <a class="nav-link" href="{{route('compras.index')}}">
           <i class="material-icons">shopping_cart</i>
             <p>{{ __('Compras') }}</p>
         </a>

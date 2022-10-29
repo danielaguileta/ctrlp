@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\compras\tbl_comprasController;
 use App\Http\Controllers\CotizacionesController;
 use App\Http\Controllers\DatosEmpresaController;
 use App\Http\Controllers\ServiciosController;
@@ -71,3 +72,7 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'App\Http\Controllers\ProfileController@password']);
 });
 
+//Compras
+Route::group(['middleware' => ['auth']], function () {
+    Route::resource('compras', tbl_comprasController::class)->names('compras');
+});

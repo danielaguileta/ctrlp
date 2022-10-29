@@ -5,7 +5,7 @@ namespace App\Http\Controllers\compras;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class tbl_detallecomprasController extends Controller
+class tbl_comprasController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class tbl_detallecomprasController extends Controller
      */
     public function index()
     {
-        //
+        return view ('compras.index');
     }
 
     /**
